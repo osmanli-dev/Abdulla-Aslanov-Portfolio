@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>APO — divar rəsmləri</title>
+  <meta name="description" content="Bar, kafe, restoran, mənzil və uşaq otaqları üçün əl ilə çəkilən divar rəsmləri. İşlər və əlaqə.">
+  <meta name="theme-color" content="#f3efe8">
+
+  <meta property="og:title" content="APO — divar rəsmləri">
+  <meta property="og:description" content="Bar, kafe, restoran, mənzil və uşaq otaqları üçün divar rəsmləri.">
+  <meta property="og:image" content="images/hero.webp">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23161412'/><circle cx='32' cy='32' r='13' fill='%23d4572f'/></svg>">
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a class="logo" href="#top" aria-label="APO">
+      <span class="logo__dot" aria-hidden="true"></span>APO
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#works" data-i18n="nav.works">İşlər</a>
+      <a href="#about" data-i18n="nav.about">Haqqımda</a>
+      <a href="#contact" class="nav__cta" data-i18n="nav.contact">Əlaqə</a>
+    </nav>
+    <div class="header__tools">
+      <div class="lang" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Dil">
+        <button type="button" data-lang="az" lang="az" aria-label="Azərbaycan dili">AZ</button>
+        <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+        <button type="button" data-lang="ru" lang="ru" aria-label="Русский">RU</button>
+        <button type="button" data-lang="tr" lang="tr" aria-label="Türkçe">TR</button>
+      </div>
+      <button class="burger" id="burger" data-i18n-attr="aria-label:nav.open" aria-label="Menyunu aç" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero__img" src="images/hero.webp" data-i18n-attr="alt:hero.alt" alt="Pank-rok üslubunda divar rəsmi: musiqiçilərin portretləri və yazılar" fetchpriority="high">
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__content container">
+      <p class="eyebrow eyebrow--light" data-i18n="hero.eyebrow">Divar rəsmləri</p>
+      <h1 class="hero__title" data-i18n="hero.title">Baxmağa doyulmayan divarlar</h1>
+      <p class="hero__lead" data-i18n="hero.lead">Bar, kafe, restoran, mənzil və uşaq otaqları üçün divar rəsmləri — əl ilə, məkanınıza və ideyanıza uyğun.</p>
+      <div class="hero__actions">
+        <a href="#works" class="btn btn--light" data-i18n="hero.works">İşlərə baxın</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="hero.contact">Layihəni müzakirə edək</a>
+      </div>
+    </div>
+    <a href="#works" class="hero__scroll" data-i18n-attr="aria-label:hero.scroll" aria-label="İşlərə keç"><span></span></a>
+  </section>
+
+  <!-- WORKS: карточки строятся из js/works.js -->
+  <section class="section works" id="works">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow" data-i18n="works.eyebrow">Portfolio</p>
+          <h2 class="section__title" data-i18n="works.title">İşlərim</h2>
+        </div>
+        <div class="filters" role="tablist" data-i18n-attr="aria-label:works.filter" aria-label="İşləri süz">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="cat.all">Hamısı</button>
+          <button class="chip" data-filter="music" role="tab" aria-selected="false" data-i18n="cat.music">Musiqi və kino</button>
+          <button class="chip" data-filter="portraits" role="tab" aria-selected="false" data-i18n="cat.portraits">Portretlər</button>
+          <button class="chip" data-filter="scenes" role="tab" aria-selected="false" data-i18n="cat.scenes">Mənzərələr</button>
+          <button class="chip" data-filter="street" role="tab" aria-selected="false" data-i18n="cat.street">Küçə sənəti və pop-art</button>
+          <button class="chip" data-filter="kids" role="tab" aria-selected="false" data-i18n="cat.kids">Uşaq otaqları</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+
+      <div class="more">
+        <button class="btn btn--dark" id="more" type="button" data-i18n="works.more" hidden>Daha çox göstər</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__media reveal">
+        <img src="images/artist.webp" width="410" height="512" loading="lazy" data-i18n-attr="alt:about.alt" alt="Rəssamın portreti">
+      </div>
+      <div class="about__text reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">Haqqımda</p>
+        <h2 class="section__title" data-i18n="about.title">Hər divarın öz hekayəsi var</h2>
+        <p data-i18n="about.p1">Divarlara əl ilə rəsm çəkirəm — barlarda, kafelərdə, restoranlarda, evlərdə və uşaq otaqlarında. Hər işi məkana və sizin istəyinizə uyğun düşünürəm.</p>
+        <!-- TODO: заменить цифры на реальные -->
+        <ul class="stats">
+          <li><strong>7</strong><span data-i18n="stats.years">illik təcrübə</span></li>
+          <li><strong>150+</strong><span data-i18n="stats.projects">layihə</span></li>
+          <li><strong data-i18n="stats.area.value">4 000</strong><span data-i18n="stats.area">m² divar rəsmi</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <p class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Əlaqə</p>
+      <h2 class="contact__title" data-i18n="contact.title">Divarınız var? Gəlin onu canlandıraq.</h2>
+      <p class="contact__lead" data-i18n="contact.lead">Divarın şəklini və ideyanız barədə bir neçə söz göndərin — gün ərzində cavab verəcəyəm.</p>
+      <div class="contact__links">
+        <a class="clink" href="https://wa.me/994507722611" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          <span><small>WhatsApp</small>+994 50 772 26 11</span>
+        </a>
+        <a class="clink" href="https://instagram.com/abdullart_13" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 3.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.4.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.4.1-4 .1s-3 0-4-.1c-2.8-.1-4-1.4-4.1-4.1-.1-1-.1-1.4-.1-4s0-3 .1-4C4 5.3 5.3 4 8 3.9c1-.1 1.3-.1 4-.1ZM12 2c-2.7 0-3.1 0-4.1.1C4.2 2.2 2.2 4.2 2.1 7.9 2 8.9 2 9.3 2 12s0 3.1.1 4.1c.1 3.7 2.1 5.7 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c3.7-.1 5.7-2.1 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.1-3.7-2.1-5.7-5.8-5.8C15.1 2 14.7 2 12 2Z"/></svg>
+          <span><small>Instagram</small>@abdullart_13</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year">2026</span> APO. <span data-i18n="footer.text">Divar rəsmləri.</span></span>
+    <a href="#top" data-i18n="footer.top">Yuxarı ↑</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<dialog class="lightbox" id="lightbox" data-i18n-attr="aria-label:lb.label" aria-label="İşə baxış">
+  <div class="lightbox__bar">
+    <span class="lightbox__count" id="lbCount"></span>
+    <button class="lightbox__close" id="lbClose" data-i18n-attr="aria-label:lb.close" aria-label="Bağla">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="lightbox__stage" id="lbStage">
+    <img id="lbImg" alt="">
+  </div>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" data-i18n-attr="aria-label:lb.prev" aria-label="Əvvəlki iş">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" data-i18n-attr="aria-label:lb.next" aria-label="Növbəti iş">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="lightbox__caption">
+    <span class="lightbox__title" id="lbTitle"></span>
+    <span class="lightbox__meta" id="lbMeta"></span>
+  </div>
+</dialog>
+
+<!-- loads every glyph subset up front so switching languages never waits on a font -->
+<div class="font-warmup" aria-hidden="true"><span>ƏəĞğİıŞşÇçÖöÜü Ёё Жж</span><b>ƏəĞğİıŞşÇçÖöÜü Ёё Жж</b></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/works.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
